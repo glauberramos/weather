@@ -3,7 +3,7 @@ $.simpleWeather({
     unit: 'c',
     success: function(weather) {
         $("#temperature").html(weather.wind.chill + '&deg;');
-        $("#condition").html(weather.currently);
+        $("#condition").html(conditionMap[weather.code]);
         $("#text").html(getAppText());
         $("body").css("background", colorMap[weather.code]);
     },
@@ -13,7 +13,59 @@ $.simpleWeather({
 });
 
 getAppText = function(condition, temperature) {
-    return "test";
+    return "Better put some boots on and get that rainbow. And that raincoat. Yeah, you'll be fine.";
+}
+
+conditionMap = {
+    0: 'CALL NOAH, FLOOD IS HERE.',
+    1: 'CALL NOAH, FLOOD IS HERE.',
+    2: 'CALL NOAH, FLOOD IS HERE.',
+    3: 'CALL NOAH, FLOOD IS HERE.',
+    4: 'CALL NOAH, FLOOD IS HERE.',
+    5: 'CALL NOAH, FLOOD IS HERE.',
+    6: 'CALL NOAH, FLOOD IS HERE.',
+    7: 'CALL NOAH, FLOOD IS HERE.',
+    8: 'CALL NOAH, FLOOD IS HERE.',
+    9: 'CALL NOAH, FLOOD IS HERE.',
+    10: 'CALL NOAH, FLOOD IS HERE.',
+    11: 'CALL NOAH, FLOOD IS HERE.',
+    12: 'CALL NOAH, FLOOD IS HERE.',
+    13: 'CALL NOAH, FLOOD IS HERE.',
+    14: 'CALL NOAH, FLOOD IS HERE.',
+    15: 'CALL NOAH, FLOOD IS HERE.',
+    16: 'CALL NOAH, FLOOD IS HERE.',
+    17: 'CALL NOAH, FLOOD IS HERE.',
+    18: 'CALL NOAH, FLOOD IS HERE.',
+    19: 'CALL NOAH, FLOOD IS HERE.',
+    20: 'CALL NOAH, FLOOD IS HERE.',
+    21: 'CALL NOAH, FLOOD IS HERE.',
+    22: 'CALL NOAH, FLOOD IS HERE.',
+    23: 'CALL NOAH, FLOOD IS HERE.',
+    24: 'CALL NOAH, FLOOD IS HERE.',
+    25: 'CALL NOAH, FLOOD IS HERE.',
+    26: 'CALL NOAH, FLOOD IS HERE.',
+    27: 'CALL NOAH, FLOOD IS HERE.',
+    28: 'CALL NOAH, FLOOD IS HERE.',
+    29: 'CALL NOAH, FLOOD IS HERE.',
+    30: 'CALL NOAH, FLOOD IS HERE.',
+    31: 'CALL NOAH, FLOOD IS HERE.',
+    32: 'CALL NOAH, FLOOD IS HERE.',
+    33: 'CALL NOAH, FLOOD IS HERE.',
+    34: 'CALL NOAH, FLOOD IS HERE.',
+    35: 'CALL NOAH, FLOOD IS HERE.',
+    36: 'CALL NOAH, FLOOD IS HERE.',
+    37: 'CALL NOAH, FLOOD IS HERE.',
+    38: 'CALL NOAH, FLOOD IS HERE.',
+    39: 'CALL NOAH, FLOOD IS HERE.',
+    40: 'CALL NOAH, FLOOD IS HERE.',
+    41: 'CALL NOAH, FLOOD IS HERE.',
+    42: 'CALL NOAH, FLOOD IS HERE.',
+    43: 'CALL NOAH, FLOOD IS HERE.',
+    44: 'CALL NOAH, FLOOD IS HERE.',
+    45: 'CALL NOAH, FLOOD IS HERE.',
+    46: 'CALL NOAH, FLOOD IS HERE.',
+    47: 'CALL NOAH, FLOOD IS HERE.',
+    3200: 'CALL NOAH, FLOOD IS HERE.'
 }
 
 colorMap = {
