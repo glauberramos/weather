@@ -30,23 +30,19 @@ weather.yahoo.getLocation = (function () {
 	
 	// Yahoo specific stuff
 	var callback;
-	var toQueryString = function (obj) {      
-		var parts = [];      
-		for(var each in obj) if (obj.hasOwnProperty(each)) {  
-			parts.push(encodeURIComponent(each) + '=' + encodeURIComponent(obj[each]));      
-		}      
-		return parts.join('&');    
-	};
-
 	var yahooCallback = function (data) {
-		alert('success');
+		if (data.query.count > 0) {
+			var woeid = data.query.results.Result.woeid;
+			callback({ 'woeid' : woeid });
+		} else {
+			callback({ 'code' : 0, 'message' : 'No WOEID found for provided coordinates' });
+		}
 	};
 
 
 	var getWoeid = function (data) {
 		if (!data.err) {
-			var query = 'SELECT * FROM geo.places WHERE text=\"' + data.lat + ', ' + data.lon + '\" AND placeTypeName.code=7';
-
+			var query = 'SELECT * FROM geo.placefinder WHERE text="' + data.lat + ',' + data.lon + '" AND gflags="R"';
 			var yql = new YQLQuery(query, yahooCallback);
 			yql.fetch();
 		} else {
@@ -67,3 +63,6 @@ weather.yahoo.getLocation = (function () {
 	};
 
 }());
+
+callback = function (data) { alert(data.woeid); };
+weather.yahoo.getLocation(callback);
