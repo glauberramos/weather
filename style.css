@@ -1,0 +1,26 @@
+body {
+  font: 13px 'Open Sans';
+}
+
+#weather {
+  width: 425px;
+  margin: 0px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#city {
+  color: white;
+  font-size: 2.0em;
+}
+
+#condition, #text {
+  font-size: 0.2em;
+}
+
+#weather p {
+  font-size: 9em;
+  margin: 40px 0 0;
+  line-height: 0.5;
+  color: #fff;
+}
