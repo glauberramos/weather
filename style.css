@@ -1,5 +1,6 @@
 body {
-  font: 13px 'Open Sans';
+  font-family: 'OpenSans';
+  font-size: 13px;
 }
 
 #weather {
@@ -16,6 +17,10 @@ body {
 
 #condition, #text {
   font-size: 0.2em;
+}
+
+#temperature {
+  font-family: "OpenSansLight";
 }
 
 #weather p {

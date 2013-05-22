@@ -2,8 +2,7 @@ $.simpleWeather({
     woeid: '455823',
     unit: 'c',
     success: function(weather) {
-        $("#city").html(weather.city);
-        $("#temperature").html(weather.wind.chill + '&deg; ' + weather.units.temp);
+        $("#temperature").html(weather.wind.chill + '&deg;');
         $("#condition").html(weather.currently);
         $("#text").html(getAppText());
         $("body").css("background", colorMap[weather.code]);
