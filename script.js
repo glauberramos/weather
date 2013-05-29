@@ -5,8 +5,10 @@ $(function() {
         success: function(weather) {
             $("#temperature").html(weather.wind.chill + '&deg;');
             $("#condition").html(conditionMap[weather.code]);
+            //$("#condition").html(conditionMap[36]);
             $("#text").html(getAppText());
             $("body").css("background", colorMap[weather.code]);
+            //$("body").css("background", colorMap[36]);
         },
         error: function(error) {
             $("#weather").html('<p>' + error + '</p>');
@@ -54,7 +56,7 @@ $(function() {
         33: 'CALL NOAH, FLOOD IS HERE.',
         34: 'CALL NOAH, FLOOD IS HERE.',
         35: 'CALL NOAH, FLOOD IS HERE.',
-        36: 'CALL NOAH, FLOOD IS HERE.',
+        36: 'GET OUTSIDE. NICE DAY!.',
         37: 'CALL NOAH, FLOOD IS HERE.',
         38: 'CALL NOAH, FLOOD IS HERE.',
         39: 'CALL NOAH, FLOOD IS HERE.',
@@ -70,7 +72,7 @@ $(function() {
     }
 
     colorMap = {
-        0: '#2c3e50',
+        0: '#34495e',
         1: '#2c3e50',
         2: '#2c3e50',
         3: '#2c3e50',
@@ -106,12 +108,12 @@ $(function() {
         33: '#2c3e50',
         34: '#2c3e50',
         35: '#2c3e50',
-        36: '#2c3e50',
+        36: '#c0392b',
         37: '#2c3e50',
         38: '#2c3e50',
         39: '#2c3e50',
         40: '#2c3e50',
-        41: '#2c3e50',
+        41: '#2980b9',
         42: '#2c3e50',
         43: '#2c3e50',
         44: '#2c3e50',
