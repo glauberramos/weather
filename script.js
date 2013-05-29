@@ -16,7 +16,7 @@ $(function() {
     });
 
     getAppText = function(condition, temperature) {
-        return "Better put some boots on and get that rainbow. And that raincoat. Yeah, you'll be fine.";
+        return "Better put some boots on and get that rainbow. And that raincoat. <br>Yeah, you'll be fine.";
     }
 
     conditionMap = {
