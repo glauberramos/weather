@@ -5,9 +5,9 @@ html {
 }
 
 #weather {
+  color: #fff;
   text-align: center;
   margin: 40px auto;
-  color: #fff;
   max-width: 800px;
 }
 
@@ -21,20 +21,20 @@ html {
 
 #condition {
   font-family: "OpenSansExtraBold";
-  font-size: 2.7rem;
-  margin-top: 4.5rem;
   display: inline-block;
-  line-height: 3.5rem;
   text-align: left;
+  font-size: 2.7rem;
+  line-height: 3.5rem;
+  margin-top: 4.5rem;
   padding: 0 5%;
 }
 
 #text {
   font-family: "OpenSansLight";
-  color: #dedede;
   display: inline-block;
   position: relative;
   text-align: left;
+  color: #dedede;
   font-size: 1.1rem;
   line-height: 2rem;
   padding: 0 5%;

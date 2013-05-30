@@ -1,4 +1,7 @@
 $(function() {
+    //remove navigation bar on iphone
+    window.scrollTo(0, 1);
+
     $.simpleWeather({
         woeid: '455823',
         unit: 'c',
